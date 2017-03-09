@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-	<svg width="200" height="200">
+	<svg width="600" height="400">
 		<defs>
 			<g id="forme">
 				<circle cx="100" cy="100" r="50" fill="#f00" />
@@ -14,7 +14,10 @@
 				<ellipse cx="100" cy="100" rx="15" ry="80" fill="#0f0" />
 			</g>
 		</defs>
-		<use xlink:href="#forme" cx="0" xy="0" />
+		<use xlink:href="#forme" x="200" y="0" />
+		<use xlink:href="#forme" x="0" y="100" />
+		<use xlink:href="#forme" x="400" y="100" />
+		<use xlink:href="#forme" x="200" y="200" />
 	</svg>
 	<script src="js/script.js"></script>	
 </body>
