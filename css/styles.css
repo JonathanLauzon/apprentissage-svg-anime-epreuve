@@ -1,14 +1,17 @@
+/*Styles partagés des formes dans le SVG #forme*/
 #forme circle, #forme ellipse {
 	stroke: #00f;
 	stroke-width: 3px;
 }
 
+/*Styles propres aux cercles*/
 #forme circle {
 	stroke-dasharray: 314.159;
 	stroke-dashoffset: 314.159;
 	animation: contourcercle 5s linear alternate infinite;
 }
 
+/*Styles propres aux ellipses*/
 #forme ellipse {
 	transform: none;
 	transform-origin: 100px 100px;
@@ -17,12 +20,14 @@
 	stroke-dashoffset: 361.624;
 }
 
+/*Animation de rotation des ellipses*/
 @keyframes rotation {
 	to {
 		transform:	rotate(360deg);
 	}
 }
 
+/*Animation de bordure du cercle*/
 @keyframes contourcercle {
 	from {
 		stroke-dashoffset: 314.159;
@@ -32,6 +37,7 @@
 	}
 }
 
+/*Animation de bordure des ellipses*/
 @keyframes contourellipse {
 	from {
 		stroke-dashoffset: 361.624;
