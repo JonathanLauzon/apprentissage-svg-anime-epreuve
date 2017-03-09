@@ -1,11 +1,42 @@
+#forme circle, #forme ellipse {
+	stroke: #00f;
+	stroke-width: 3px;
+}
+
+#forme circle {
+	stroke-dasharray: 314.159;
+	stroke-dashoffset: 314.159;
+	animation: contourcercle 5s linear alternate infinite;
+}
+
 #forme ellipse {
 	transform: none;
 	transform-origin: 100px 100px;
-	animation: rotation 1s linear infinite;
+	animation: rotation 1s linear infinite, contourellipse 5s linear alternate infinite;
+	stroke-dasharray: 361.624;
+	stroke-dashoffset: 361.624;
 }
 
 @keyframes rotation {
 	to {
 		transform:	rotate(360deg);
+	}
+}
+
+@keyframes contourcercle {
+	from {
+		stroke-dashoffset: 314.159;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes contourellipse {
+	from {
+		stroke-dashoffset: 361.624;
+	}
+	to {
+		stroke-dashoffset: 0;
 	}
 }
